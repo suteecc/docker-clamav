@@ -8,7 +8,6 @@ RUN apt-get -q -y update &&\
         clamav-freshclam \
 #        libclamunrar7 \
         wget && \
-        telnet && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
