@@ -20,8 +20,8 @@ RUN wget -O /var/lib/clamav/main.cvd http://database.clamav.net/main.cvd && \
 # permission juggling 
 RUN mkdir /var/run/clamav && \
     chown clamav:clamav /var/run/clamav && \
-    chmod 750 /var/run/clamav \
-    groupadd -g 103 amavis \
+    chmod 750 /var/run/clamav && \
+    groupadd -g 103 amavis && \
     usermod -a -G amavis clamav
 
 # av configuration update 
